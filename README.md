@@ -1,12 +1,18 @@
 # odoo-docker-compose
 odoo docker with docker compose
-1. Cài đặt Doker, docker compose 
+1. Mô tả:
+Postgresql 10 
+Odoo12 FROM debian:buster-slim 
+ODOO_RELEASE=20210318
+Odoo14 Lastest docker compose image 
 
-2. tạo thư mục và cấp quyền 777 cho chúng 
-   addons 
-   config, etc 
-   data
-   postgresql
-3. build: docker-compose up -d 
-4. restart odoo: docker-compose restart odoo12 
-5. restart post gresql: docker-compose restart db
+
+2. Cài đặt Doker, docker compose
+
+tạo thư mục và cấp quyền 777 cho chúng addons config, etc data postgresql
+
+build: docker-compose up -d
+
+restart odoo: docker-compose restart odoo12
+
+restart post gresql: docker-compose restart db

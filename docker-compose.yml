@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.3'
 services:
   db:
     image: postgres:10
@@ -15,7 +15,8 @@ services:
       - ./postgresql:/var/lib/postgresql/data
 
   odoo12:
-    image: odoo:12.0
+#    image: odoo:12.0
+    build: .
     container_name: odoo12
     depends_on:
       - db
@@ -33,6 +34,7 @@ services:
       - ./data:/var/lib/odoo
       - ./addons:/mnt/extra-addons
       - ./etc:/etc/odoo
+      - odoo12-backup:/customs/backups
     restart: always             # run as a service
   odoo14:
     image: odoo:14.0
@@ -53,4 +55,8 @@ services:
       - ./data:/var/lib/odoo
       - ./addons:/mnt/extra-addons
       - ./config:/etc/odoo
+      - odoo14-backup:/customs/backups
     restart: always             # run as a service
+volumes:
+  odoo12-backup:
+  odoo14-backup:
