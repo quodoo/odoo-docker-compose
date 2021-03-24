@@ -7,3 +7,6 @@ odoo docker with docker compose
    config, etc 
    data
    postgresql
+3. build: docker-compose up -d 
+4. restart odoo: docker-compose restart odoo12 
+5. restart post gresql: docker-compose restart db
