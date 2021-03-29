@@ -10,6 +10,7 @@ ENV LANG C.UTF-8
 RUN apt-get update \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
+            sudo \
             curl \
             dirmngr \
             fonts-noto-cjk \
@@ -17,6 +18,8 @@ RUN apt-get update \
             libssl-dev \
             node-less \
             npm \
+            libssl-dev \
+            python3-dev \
             python3-num2words \
             python3-pip \
             python3-phonenumbers \

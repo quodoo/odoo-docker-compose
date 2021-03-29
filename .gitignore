@@ -13,6 +13,9 @@ __pycache__/
 postgresql/ 
 data/
 
+# addons
+addons/addons
+
 # C extensions
 *.so
 
