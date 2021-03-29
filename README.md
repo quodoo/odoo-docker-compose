@@ -9,7 +9,10 @@ Odoo14 Lastest docker compose image
 
 2. Cài đặt Doker, docker compose
 
-tạo thư mục và cấp quyền 777 cho chúng addons config, etc data postgresql
+tạo thư mục và cấp quyền cho chúng addons config, etc data postgresql
+
+sudo find . -type f -exec chmod 644 {} \;
+sudo find . -type d -exec chmod 755 {} \;
 
 build: docker-compose up -d
 
