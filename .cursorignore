@@ -3,7 +3,11 @@ odoo17-ce/odoo/*
 odoo18-ce/odoo/*
 
 odoo17-ce/odoo/addons/*
+odoo17-ce/odoo-logs/*
+odoo17-ce/.local/*
 !odoo17-ce/odoo/addons/test_*
 
 odoo18-ce/odoo/addons/*
+odoo18-ce/odoo-logs/*
+odoo18-ce/.local/*
 !odoo18-ce/odoo/addons/test_*

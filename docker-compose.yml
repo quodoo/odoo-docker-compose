@@ -4,7 +4,7 @@ include:
   - ./odoo17-ce/docker-compose.yml
   # - ./odoo18-ce/docker-compose.yml
   # - ./frontend/docker-compose.yml
- - ./nginx/docker-compose.yml
+  - ./nginx/docker-compose.yml
 
 
 networks:

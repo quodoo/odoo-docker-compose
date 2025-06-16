@@ -56,3 +56,9 @@ venv/
 database/postgres-data/*
 odoo17-ce/odoo/*    
 odoo18-ce/odoo/*
+
+odoo17-ce/odoo-logs/*    
+odoo18-ce/odoo-logs/*
+
+odoo17-ce/.local/*    
+odoo18-ce/.local/*
