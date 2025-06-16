@@ -1,0 +1,57 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Next.js
+/.next/
+/out/
+dist
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Local env files
+.env*.local
+.env
+
+# Odoo specific
+backend/odoo-data/
+backend/odoo-logs/
+backend/odoo-addons/
+database/postgres-data/
+odoo-addons-dev
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea
+
+# Other
+jspm_packages/
+.npm
+.eslintcache
+
+# Python backend
+__pycache__
+*.pyc
+*.pyo
+venv/
+.pytest_cache/
+.ipynb_checkpoints
