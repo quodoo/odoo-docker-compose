@@ -1,0 +1,30 @@
+services:    
+  odoo17-web:
+    container_name: odoo17-web
+    image: odoo:17.0
+    user: root
+    depends_on:
+      - postgres
+    ports:
+      - "10089:8069"
+      - "20089:8072" # live chat
+    tty: true
+    command: /mnt/odoo/odoo-bin --config=/etc/odoo/odoo.conf --logfile=/var/log/odoo/odoo-server.log
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=postgresDB@2025
+      - POSTGRES_DB=postgres
+    volumes:
+      - ./odoo/odoo/addons:/usr/lib/python3/dist-packages/odoo/addons/
+      - ./odoo-addons/addons-customs/:/mnt/extra-addons
+      - ./odoo-addons/addons-3rd/:/mnt/3rd-addons
+      # - ./odoo-addons/enterprise/:/mnt/enterprise
+      - ./odoo/:/mnt/odoo
+      - ./odoo.conf:/etc/odoo/odoo.conf
+      - ./.local/:/var/lib/odoo
+      - ./odoo-logs:/var/log/odoo/
+    restart: always # run as a service
+    networks: 
+      - odoo-network        
+
+# sudo docker exec -it odoo17-web /bin/bash -c "/mnt/odoo/odoo-bin --config=/etc/odoo/odoo.conf --logfile=False --http-port=9999 -d odoo17-ce -u module_update --stop-after-init"

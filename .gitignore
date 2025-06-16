@@ -55,3 +55,7 @@ __pycache__
 venv/
 .pytest_cache/
 .ipynb_checkpoints
+
+
+odoo17-ce/odoo/*    
+odoo18-ce/odoo/*

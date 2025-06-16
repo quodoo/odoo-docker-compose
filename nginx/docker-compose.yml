@@ -1,0 +1,14 @@
+services:
+  odoo-proxy:
+    image: nginx:latest
+    container_name: odoo-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./config:/etc/nginx/conf.d
+      # - /home/ubuntu/media/Odoo/odoo-react/frontend/out/:/usr/share/nginx/html/frontend:ro
+    networks:
+      - odoo-network
+#    restart: always
+    tty: true
