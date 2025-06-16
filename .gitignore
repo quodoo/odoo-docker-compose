@@ -28,12 +28,7 @@ yarn-error.log*
 .env*.local
 .env
 
-# Odoo specific
-backend/odoo-data/
-backend/odoo-logs/
-backend/odoo-addons/
-database/postgres-data/
-odoo-addons-dev
+
 
 # IDE
 .vscode/*
@@ -57,5 +52,7 @@ venv/
 .ipynb_checkpoints
 
 
+# Odoo specific
+database/postgres-data/*
 odoo17-ce/odoo/*    
 odoo18-ce/odoo/*
